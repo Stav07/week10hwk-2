@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Lesson 19 Homework 2 - Random Images - Unobtrusively
+    </title>
+
+    <style>
+        #homepage {
+            position: fixed;
+            bottom: 0;
+        }
+
+        body {
+            background-image: url(back.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+
+    <script>
+        pics = ["sdeku.jpeg", "sdabi.jpeg" , "stodaroki.jpeg" , "skachan.jpeg" , "sasuna.png"]
+
+        function getpic()
+        {
+            i = Math.floor(Math.random() * pics.length);
+
+            document.getElementById("pic").src = pics [i];
+
+        }
+
+    </script>
+
+</head>
+
+
+<body onload="getpic()">
+
+    <h2>Lesson 19 Homework 2 - Random Images - Unobtrusively</h2>
+
+    <P><i>Following is a random image. To see a new image just reload this page</i></P>
+
+    <img src="" id="pic">
+
+    <div id="homepage">
+
+        <a href="http://csnet.southtexascollege.edu/localuser/egalva37/"> Go Back To HOMPAGE</a><br>
+        Estevan Galvan
+
+    </div>
+
+</body>
+
+</html>
